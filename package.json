@@ -1,0 +1,28 @@
+{
+  "name": "hyperapp-chat",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Alex Barry",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-plugin-transform-react-jsx": "6.22",
+    "babel-preset-env": "1.6.1",
+    "hyperapp": "^1.0.2",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "uuid": "^3.2.1",
+    "webpack": "3",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.9",
+    "style-loader": "^0.19.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js",
+    "build": "webpack --config ./webpack.config.js"
+  }
+}
