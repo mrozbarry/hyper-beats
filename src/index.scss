@@ -1,34 +1,57 @@
-#root * {
-  box-sizing: border-box;
-}
+#root {
+  & * {
+    box-sizing: border-box;
+  }
 
-.beats {
-  align-items: flex-start;
-  display: flex;
-  justify-content: flex-start;
+  .tracks {
+    .track {
+      align-items: flex-start;
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 10px;
 
-  .beat {
-    width: 64px;
-    height: 65px;
+      &-config {
+        flex-shrink: 1;
+        width: 175px;
 
-    border: 2px black solid;
-    background-color: grey;
-    cursor: pointer;
+        &-oscillator-frequency {
+        }
+      }
 
-    margin: 0 10px;
-
-    transition: all .3s ease;
-
-    &.active {
-      background-color: blue;
+      .beats {
+        flex-grow: 1;
+      }
     }
+  }
 
-    &.current {
-      border-color: red;
-    }
+  .beats {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
 
-    &.active.current {
-      background-color: red;
+    .beat {
+      width: 64px;
+      height: 65px;
+
+      border: 2px black solid;
+      background-color: grey;
+      cursor: pointer;
+
+      margin: 0 10px;
+
+      transition: all .3s ease;
+
+      &.active {
+        background-color: blue;
+      }
+
+      &.current {
+        border-color: red;
+      }
+
+      &.active.current {
+        background-color: red;
+      }
     }
   }
 }
