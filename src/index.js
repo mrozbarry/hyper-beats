@@ -13,24 +13,28 @@ const view = (state, actions) => {
 
   return (
     <div>
-      <div>
-        {!state.playing && <button onclick={() => actions.resume()}>|&gt;</button>}
-        {state.playing && <button onclick={() => actions.suspend()}>||</button>}
+      <div class="song">
+        <div class="play-controls">
+          {!state.playing && <button onclick={() => actions.resume()}>|&gt;</button>}
+          {state.playing && <button onclick={() => actions.suspend()}>||</button>}
+        </div>
+
+        <div class="bpm">
+          <span class="label">BPM:</span>
+          <input
+            type="number"
+            value={state.bpm}
+            oninput={(e) => actions.setBpm(e.target.value)}
+          />
+        </div>
+
+        <div class="time"><span class="label">Time:</span> {state.currentTime}</div>
+        <div class="beat"><span class="label">Beat:</span> {state.currentBeat}</div>
+
+        <div class="track-add">
+          <button onclick={() => actions.addTrack()}>Add Track</button>
+        </div>
       </div>
-
-      <div>
-        BPM:
-        <input
-          type="number"
-          value={state.bpm}
-          oninput={(e) => actions.setBpm(e.target.value)}
-        />
-      </div>
-
-      <div>Time: {state.currentTime}</div>
-      <div>Beat: {state.currentBeat}</div>
-
-      <button onclick={() => actions.addTrack()}>Add Track</button>
 
       <div class="tracks">
         {state.tracks.map(track => (
