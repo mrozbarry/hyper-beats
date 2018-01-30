@@ -18,17 +18,51 @@ body {
     text-decoration: none;
   }
 
+  .button {
+    border: 1px solid hsl($themehue, 80%, 70%);
+    border-radius: 2px;
+    padding: .4rem 1.2rem;
+    &-default {
+      background: hsl($themehue, 80%, 70%);
+      color: hsl($themehue, 2%, 25%);
+      &:hover {
+        background: hsl($themehue, 80%, 80%);
+        cursor: pointer;
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .input {
+    &-text {
+      background: hsl($themehue, 2%, 25%);
+      border: 1px solid hsl($themehue, 80%, 70%);
+      color: hsl($themehue, 80%, 70%);
+      font-size: 1rem;
+      padding: .4rem;
+      &:focus {
+        background: hsl($themehue, 80%, 70%);
+        color: hsl($themehue, 2%, 25%);
+        outline: none;
+      }
+    }
+  }
+
   .song {
-    padding: 1rem;
+    align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 1rem;
 
     .play-controls, .time, .bpm, .beat, .track-add {
-      margin-right: 1rem;
+      margin: 1rem 1rem 0 1rem;
     }
 
     .label {
-      margin-right: 1rem;
+      margin: 1rem 1rem 0 1rem;
     }
   } 
 
@@ -37,31 +71,48 @@ body {
       align-items: flex-start;
       border-top: 1px solid hsl($themehue, 80%, 70%);
       display: flex;
+      flex-wrap: wrap;
       justify-content: flex-start;
-      padding: 1rem;
 
       &-config {
-        flex-shrink: 1;
-        margin-right: 1rem;
-
-        &-oscillator-frequency {
-        }
-      }
-
-      .beats {
+        display: flex;
+        flex-direction: column;
         flex-grow: 1;
+        height: 65px;
+        justify-content: space-around;
+        margin: 1rem;
+
+        .frequency, .info {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .frequency {
+          &-readout {
+            margin-right: 1rem;
+            width: 45px;
+            flex-shrink: 0;
+          }
+          &-slider {
+            width: 100%;
+          }
+        }
       }
     }
   }
-
+  
   .beats {
     align-items: flex-start;
     display: flex;
+    flex-grow: 8;
     justify-content: flex-start;
+    min-width: 300px;
+    margin: 1rem;
 
     .beat {
       width: 100%;
       height: 65px;
+      flex-shrink: 1;
 
       border-bottom: 8px hsl($themehue, 0%, 30%) solid;
       border-radius: 2px;

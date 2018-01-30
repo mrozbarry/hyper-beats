@@ -15,13 +15,14 @@ const view = (state, actions) => {
     <div>
       <div class="song">
         <div class="play-controls">
-          {!state.playing && <button onclick={() => actions.resume()}>|&gt;</button>}
-          {state.playing && <button onclick={() => actions.suspend()}>||</button>}
+          {!state.playing && <button class="button button-default" onclick={() => actions.resume()}>|&gt;</button>}
+          {state.playing && <button class="button button-default" onclick={() => actions.suspend()}>||</button>}
         </div>
 
         <div class="bpm">
           <span class="label">BPM:</span>
           <input
+            class="input-text"
             type="number"
             value={state.bpm}
             oninput={(e) => actions.setBpm(e.target.value)}
@@ -32,7 +33,7 @@ const view = (state, actions) => {
         <div class="beat"><span class="label">Beat:</span> {state.currentBeat}</div>
 
         <div class="track-add">
-          <button onclick={() => actions.addTrack()}>Add Track</button>
+          <button class="button button-default" onclick={() => actions.addTrack()}>Add Track</button>
         </div>
       </div>
 
