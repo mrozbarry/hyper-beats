@@ -81,6 +81,7 @@ body {
 
       &.active.current {
         background-color: hsl($themehue, 80%, 90%);
+        transform: scale(1.1);
       }
 
       &:nth-child(4n-3) {
