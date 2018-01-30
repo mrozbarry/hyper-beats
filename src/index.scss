@@ -65,16 +65,11 @@ body {
 
       border-bottom: 8px hsl($themehue, 0%, 30%) solid;
       border-radius: 2px;
-      background-color: hsl($themehue, 0%, 40%);
       cursor: pointer;
 
       margin: 0 2px;
 
       transition: all .1s ease;
-
-      &:hover {
-        background-color: hsl($themehue, 0%, 50%);
-      }
 
       &.active {
         border-color: hsl($themehue, 80%, 70%);
@@ -92,6 +87,20 @@ body {
         border-top: 1px solid hsl($themehue, 0%, 70%);
         border-right: 1px solid hsl($themehue, 0%, 70%);
         border-left: 1px solid hsl($themehue, 0%, 70%);
+      }
+
+      &:nth-child(2n) {
+        background-color: hsl($themehue, 0%, 35%);
+        &:hover {
+          background-color: hsl($themehue, 0%, 50%);
+        }
+      }
+
+      &:nth-child(2n-1) {
+        background-color: hsl($themehue, 0%, 40%);
+        &:hover {
+          background-color: hsl($themehue, 0%, 50%);
+        }
       }
     }
   }
