@@ -27,7 +27,7 @@ const view = (state, actions) => {
         />
       </div>
 
-      <div>Time: {state.currentTime}</div>
+      <div>Time: {state.currentTime.toFixed(2)}</div>
       <div>Beat: {state.currentBeat}</div>
 
       <button onclick={() => actions.addTrack()}>Add Track</button>
