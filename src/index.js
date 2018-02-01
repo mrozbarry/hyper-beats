@@ -59,3 +59,4 @@ const view = (state, actions) => {
 
 const loop = app(initialState, actions, view, document.getElementById('root'));
 loop.suspend();
+loop.addTrack();
