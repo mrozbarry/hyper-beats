@@ -29,7 +29,7 @@ const view = (state, actions) => {
           />
         </div>
 
-        <div class="time"><span class="label">Time:</span> {state.currentTime}</div>
+        <div class="time"><span class="label">Time:</span> {state.currentTime.toFixed(2)}</div>
         <div class="beat"><span class="label">Beat:</span> {state.currentBeat}</div>
 
         <div class="track-add">
