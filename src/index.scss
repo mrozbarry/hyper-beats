@@ -1,56 +1,158 @@
+$themehue: 150;
+
+body {
+  background-color: hsl($themehue, 2%, 25%);
+  line-height: 1;
+}
+
 #root {
   & * {
     box-sizing: border-box;
   }
+  
+  color: hsl($themehue, 0%, 80%);
+  font-family: sans-serif;
 
-  .tracks {
-    .track {
-      align-items: flex-start;
-      display: flex;
-      justify-content: flex-start;
-      margin-bottom: 10px;
+  a {
+    color: hsl($themehue, 80%, 70%);
+    text-decoration: none;
+  }
 
-      &-config {
-        flex-shrink: 1;
-        width: 175px;
-
-        &-oscillator-frequency {
-        }
+  .button {
+    border: 1px solid hsl($themehue, 80%, 70%);
+    border-radius: 2px;
+    padding: .4rem 1.2rem;
+    &-default {
+      background: hsl($themehue, 80%, 70%);
+      color: hsl($themehue, 2%, 25%);
+      &:hover {
+        background: hsl($themehue, 80%, 80%);
+        cursor: pointer;
       }
-
-      .beats {
-        flex-grow: 1;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .input {
+    &-text {
+      background: hsl($themehue, 2%, 25%);
+      border: 1px solid hsl($themehue, 80%, 70%);
+      color: hsl($themehue, 80%, 70%);
+      font-size: 1rem;
+      padding: .4rem;
+      &:focus {
+        background: hsl($themehue, 80%, 70%);
+        color: hsl($themehue, 2%, 25%);
+        outline: none;
       }
     }
   }
 
+  .song {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .play-controls, .time, .bpm, .beat, .track-add {
+      margin: 1rem 1rem 0 1rem;
+    }
+
+    .label {
+      margin: 1rem 1rem 0 1rem;
+    }
+  } 
+
+  .tracks {
+    .track {
+      align-items: flex-start;
+      border-top: 1px solid hsl($themehue, 80%, 70%);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      &-config {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        height: 65px;
+        justify-content: space-around;
+        margin: 1rem;
+
+        .frequency, .info {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .frequency {
+          &-readout {
+            margin-right: 1rem;
+            width: 45px;
+            flex-shrink: 0;
+          }
+          &-slider {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  
   .beats {
     align-items: flex-start;
     display: flex;
+    flex-grow: 8;
     justify-content: flex-start;
+    min-width: 300px;
+    margin: 1rem;
 
     .beat {
-      width: 64px;
+      width: 100%;
       height: 65px;
+      flex-shrink: 1;
 
-      border: 2px black solid;
-      background-color: grey;
+      border-bottom: 8px hsl($themehue, 0%, 30%) solid;
+      border-radius: 2px;
       cursor: pointer;
 
-      margin: 0 10px;
+      margin: 0 2px;
 
-      transition: all .3s ease;
+      transition: all .1s ease;
 
       &.active {
-        background-color: blue;
+        border-color: hsl($themehue, 80%, 70%);
       }
 
       &.current {
-        border-color: red;
+        border-color: hsl($themehue, 80%, 80%);
       }
 
       &.active.current {
-        background-color: red;
+        background-color: hsl($themehue, 80%, 90%);
+        transform: scale(1.1);
+      }
+
+      &:nth-child(4n-3) {
+        border-top: 1px solid hsl($themehue, 0%, 70%);
+        border-right: 1px solid hsl($themehue, 0%, 70%);
+        border-left: 1px solid hsl($themehue, 0%, 70%);
+      }
+
+      &:nth-child(2n) {
+        background-color: hsl($themehue, 0%, 35%);
+        &:hover {
+          background-color: hsl($themehue, 0%, 50%);
+        }
+      }
+
+      &:nth-child(2n-1) {
+        background-color: hsl($themehue, 0%, 40%);
+        &:hover {
+          background-color: hsl($themehue, 0%, 50%);
+        }
       }
     }
   }
