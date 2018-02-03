@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/ejj2qxq.css");
+
 $themehue: 150;
 
 body {
@@ -11,7 +13,7 @@ body {
   }
   
   color: hsl($themehue, 0%, 80%);
-  font-family: sans-serif;
+  font-family: "niveau-grotesk",sans-serif;
 
   a {
     color: hsl($themehue, 80%, 70%);
