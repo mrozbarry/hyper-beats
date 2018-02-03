@@ -6,7 +6,7 @@ import Beat from './Beat';
 import { initialState, actions } from './state';
 
 
-import './index.scss';
+import './styles/index.scss';
 
 const view = (state, actions) => {
   const beats = ' '.repeat(state.beatsPerLoop).split('').map((_, idx) => idx);

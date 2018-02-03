@@ -1,9 +1,11 @@
 @import url("https://use.typekit.net/ejj2qxq.css");
+@import 'themesettings.scss';
+@import 'colour.scss';
+@import 'typography.scss';
 
-$themehue: 150;
 
 body {
-  background-color: hsl($themehue, 2%, 25%);
+  background-color: $primary-darkest;
   line-height: 1;
 }
 
@@ -11,24 +13,16 @@ body {
   & * {
     box-sizing: border-box;
   }
-  
-  color: hsl($themehue, 0%, 80%);
-  font-family: "niveau-grotesk",sans-serif;
-
-  a {
-    color: hsl($themehue, 80%, 70%);
-    text-decoration: none;
-  }
 
   .button {
-    border: 1px solid hsl($themehue, 80%, 70%);
+    border: 1px solid $primary;
     border-radius: 2px;
     padding: .4rem 1.2rem;
     &-default {
-      background: hsl($themehue, 80%, 70%);
-      color: hsl($themehue, 2%, 25%);
+      background: $primary;
+      color: $primary-darkest;
       &:hover {
-        background: hsl($themehue, 80%, 80%);
+        background: $primary-light;
         cursor: pointer;
       }
     }
@@ -39,14 +33,14 @@ body {
   
   .input {
     &-text {
-      background: hsl($themehue, 2%, 25%);
-      border: 1px solid hsl($themehue, 80%, 70%);
-      color: hsl($themehue, 80%, 70%);
+      background: $primary-darkest;
+      border: 1px solid $primary;
+      color: $primary;
       font-size: 1rem;
       padding: .4rem;
       &:focus {
-        background: hsl($themehue, 80%, 70%);
-        color: hsl($themehue, 2%, 25%);
+        background: $primary;
+        color: $primary-darkest;
         outline: none;
       }
     }
@@ -71,7 +65,7 @@ body {
   .tracks {
     .track {
       align-items: flex-start;
-      border-top: 1px solid hsl($themehue, 80%, 70%);
+      border-top: 1px solid $primary;
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -116,7 +110,7 @@ body {
       height: 65px;
       flex-shrink: 1;
 
-      border-bottom: 8px hsl($themehue, 0%, 30%) solid;
+      border-bottom: 8px $gray-darkest solid;
       border-radius: 2px;
       cursor: pointer;
 
@@ -125,35 +119,35 @@ body {
       transition: all .1s ease;
 
       &.active {
-        border-color: hsl($themehue, 80%, 70%);
+        border-color: $primary;
       }
 
       &.current {
-        border-color: hsl($themehue, 80%, 80%);
+        border-color: $primary-light;
       }
 
       &.active.current {
-        background-color: hsl($themehue, 80%, 90%);
+        background-color: $primary-lighter;
         transform: scale(1.1);
       }
 
       &:nth-child(4n-3) {
-        border-top: 1px solid hsl($themehue, 0%, 70%);
-        border-right: 1px solid hsl($themehue, 0%, 70%);
-        border-left: 1px solid hsl($themehue, 0%, 70%);
+        border-top: 1px solid $gray-lighter;
+        border-right: 1px solid $gray-lighter;
+        border-left: 1px solid $gray-lighter;
       }
 
       &:nth-child(2n) {
-        background-color: hsl($themehue, 0%, 35%);
+        background-color: $gray-darker;
         &:hover {
-          background-color: hsl($themehue, 0%, 50%);
+          background-color: $gray;
         }
       }
 
       &:nth-child(2n-1) {
-        background-color: hsl($themehue, 0%, 40%);
+        background-color: $gray-dark;
         &:hover {
-          background-color: hsl($themehue, 0%, 50%);
+          background-color: $gray;
         }
       }
     }
