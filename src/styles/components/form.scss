@@ -1,0 +1,31 @@
+.button {
+  border: 1px solid $primary;
+  border-radius: 2px;
+  padding: .4rem 1.2rem;
+  &-default {
+    background: $primary;
+    color: $primary-darkest;
+    &:hover {
+      background: $primary-light;
+      cursor: pointer;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.input {
+  &-text {
+    background: $primary-darkest;
+    border: 1px solid $primary;
+    color: $primary;
+    font-size: 1rem;
+    padding: .4rem;
+    &:focus {
+      background: $primary;
+      color: $primary-darkest;
+      outline: none;
+    }
+  }
+}

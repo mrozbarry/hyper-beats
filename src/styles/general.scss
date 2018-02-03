@@ -1,0 +1,10 @@
+body {
+  background-color: $primary-darkest;
+  line-height: 1;
+}
+
+#root {
+  & * {
+    box-sizing: border-box;
+  }
+}
