@@ -4,7 +4,7 @@ const TrackConfig = ({ track, actions }) => (
   <div class="track-config">
     <div class="info">
       <div class="track-title">
-        <div class="uppercase text-small margin-bottom-tiny">Track Title</div>
+        <div class="label text-smaller">Track Title</div>
         <div class="title">Oscillator</div>
       </div>
       <a

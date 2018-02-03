@@ -20,7 +20,7 @@ const view = (state, actions) => {
         </div>
 
         <div class="bpm">
-          <span class="label uppercase">BPM:</span>
+          <span class="label text-small">BPM:</span>
           <input
             class="input-text"
             type="number"
@@ -29,8 +29,8 @@ const view = (state, actions) => {
           />
         </div>
 
-        <div class="time"><span class="label uppercase">Time:</span> {state.currentTime.toFixed(2)}</div>
-        <div class="beat"><span class="label uppercase">Beat:</span> {state.currentBeat}</div>
+        <div class="time"><span class="label text-small">Time:</span> {state.currentTime.toFixed(2)}</div>
+        <div class="beat"><span class="label text-small">Beat:</span> {state.currentBeat}</div>
 
         <div class="track-add">
           <button class="button button-default uppercase" onclick={() => actions.addTrack()}><i class="fas fa-plus margin-right-small"></i> Add Track</button>
