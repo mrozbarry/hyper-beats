@@ -1,0 +1,15 @@
+.margin {
+  &-bottom {
+    &-small {
+      margin-bottom: 0.5rem;
+    }
+    &-tiny {
+      margin-bottom: 0.2rem;
+    }
+  }
+  &-right {
+    &-small {
+      margin-right: 0.5rem;
+    }
+  }
+}

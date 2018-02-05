@@ -6,7 +6,7 @@ import Beat from './Beat';
 import { initialState, actions } from './state';
 
 
-import './index.scss';
+import './styles/index.scss';
 
 const view = (state, actions) => {
   const beats = ' '.repeat(state.beatsPerLoop).split('').map((_, idx) => idx);
@@ -15,12 +15,12 @@ const view = (state, actions) => {
     <div>
       <div class="song">
         <div class="play-controls">
-          {!state.playing && <button class="button button-default" onclick={() => actions.resume()}>|&gt;</button>}
-          {state.playing && <button class="button button-default" onclick={() => actions.suspend()}>||</button>}
+          {!state.playing && <button class="button button-default text-large" onclick={() => actions.resume()}><i class="fas fa-play" /></button>}
+          {state.playing && <button class="button button-default text-large" onclick={() => actions.suspend()}><i class="fas fa-pause" /></button>}
         </div>
 
         <div class="bpm">
-          <span class="label">BPM:</span>
+          <span class="label text-small">BPM:</span>
           <input
             class="input-text"
             type="number"
@@ -29,11 +29,11 @@ const view = (state, actions) => {
           />
         </div>
 
-        <div class="time"><span class="label">Time:</span> {state.currentTime.toFixed(2)}</div>
-        <div class="beat"><span class="label">Beat:</span> {state.currentBeat}</div>
+        <div class="time"><span class="label text-small">Time:</span> {state.currentTime.toFixed(2)}</div>
+        <div class="beat"><span class="label text-small">Beat:</span> {state.currentBeat}</div>
 
         <div class="track-add">
-          <button class="button button-default" onclick={() => actions.addTrack()}>Add Track</button>
+          <button class="button button-default uppercase" onclick={() => actions.addTrack()}><i class="fas fa-plus margin-right-small" /> Add Track</button>
         </div>
       </div>
 

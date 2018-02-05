@@ -3,7 +3,10 @@ import { h } from 'hyperapp';
 const TrackConfig = ({ track, actions }) => (
   <div class="track-config">
     <div class="info">
-      <div class="title">Oscillator</div>
+      <div class="track-title">
+        <div class="label text-smaller">Track Title</div>
+        <div class="title">Oscillator</div>
+      </div>
       <a
         class="remove"
         href="#"
@@ -12,7 +15,7 @@ const TrackConfig = ({ track, actions }) => (
           actions.removeTrack(track.id);
         }}
       >
-        &times;
+        <i class="fas fa-times" />
       </a>
     </div>
     <div class="frequency">

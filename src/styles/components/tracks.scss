@@ -1,0 +1,34 @@
+.tracks {
+  .track {
+    align-items: flex-start;
+    border-top: 1px solid $primary;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &-config {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      height: 65px;
+      justify-content: space-around;
+      margin: 1rem;
+
+      .frequency, .info {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .frequency {
+        &-readout {
+          margin-right: 1rem;
+          width: 45px;
+          flex-shrink: 0;
+        }
+        &-slider {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

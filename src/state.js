@@ -25,7 +25,7 @@ export const initialState = {
   currentTime: 0,
   currentBeat: null,
   playing: true,
-  bpm: 60,
+  bpm: 480,
   beatsPerLoop: 16,
 }
 

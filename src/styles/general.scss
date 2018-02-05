@@ -1,0 +1,16 @@
+body {
+  background-color: $primary-darkest;
+  line-height: 1;
+}
+
+#root {
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+.label {
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
