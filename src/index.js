@@ -15,8 +15,8 @@ const view = (state, actions) => {
     <div>
       <div class="song">
         <div class="play-controls">
-          {!state.playing && <button class="button button-default" onclick={() => actions.resume()}><i class="fas fa-play" /></button>}
-          {state.playing && <button class="button button-default" onclick={() => actions.suspend()}><i class="fas fa-pause" /></button>}
+          {!state.playing && <button class="button button-default text-large" onclick={() => actions.resume()}><i class="fas fa-play" /></button>}
+          {state.playing && <button class="button button-default text-large" onclick={() => actions.suspend()}><i class="fas fa-pause" /></button>}
         </div>
 
         <div class="bpm">
