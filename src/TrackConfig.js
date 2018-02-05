@@ -15,7 +15,7 @@ const TrackConfig = ({ track, actions }) => (
           actions.removeTrack(track.id);
         }}
       >
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times" />
       </a>
     </div>
     <div class="frequency">
